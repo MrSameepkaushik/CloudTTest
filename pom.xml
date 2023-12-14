@@ -1,0 +1,310 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>mavenproject</groupId>
+  <artifactId>cloud.org</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <properties>
+	  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  <MavenCompiler-version>3.11.0</MavenCompiler-version>
+	  <MavenTest-version>3.2.2</MavenTest-version>
+	  <MavenFail-version>3.2.2</MavenFail-version>
+	  <MavenResource-version>3.3.1</MavenResource-version>
+	  
+	  <WebDriverManager-version>5.6.2</WebDriverManager-version>
+	  <SeleniumJava-version>4.16.1</SeleniumJava-version>
+	  <TestNG-version>7.8.0</TestNG-version>
+	  <CucumberTestNG-version>7.14.1</CucumberTestNG-version>
+	  <AllureReport-version>2.25.0</AllureReport-version>
+	  <AllureCucumberJVM-version>2.25.0</AllureCucumberJVM-version>
+	  <AllureJunit4-version>2.25.0</AllureJunit4-version>
+	  <ExtentReportCucumberJVM-version>1.14.0</ExtentReportCucumberJVM-version>
+	  <ExtentReport-version>5.1.1</ExtentReport-version>
+	  <Hamcrest-version>2.2</Hamcrest-version>
+	  
+	  <CucumberJunit-version>7.14.1</CucumberJunit-version>
+	  <CucumberJava-version>7.14.1</CucumberJava-version>
+	  <CucumberGherkin-version>7.14.1</CucumberGherkin-version>
+	  <CucumberReport-version>5.7.7</CucumberReport-version>
+	  <log4j-version>2.09</log4j-version>
+	  <Json-version>2.16.0</Json-version>
+	  
+	  <RestAssuredAPI-version>5.4.0</RestAssuredAPI-version>
+	  <Sonar-Maven-plugin-version>3.10.0.2594</Sonar-Maven-plugin-version>
+	  <JiraClient-version>0.5</JiraClient-version>
+	  <HTTPClient-version>4.5.14</HTTPClient-version>
+	  <JavaCompiler-version>17.0</JavaCompiler-version>
+	  <POI-version>5.2.5</POI-version>
+	  <POI-OOXML-version>5.2.5</POI-OOXML-version>
+	  <POI-OOXML-Schema-version>4.1.2</POI-OOXML-Schema-version>
+	  <Gson-version>2.10.1</Gson-version>
+	  <SL4J-API-version>2.0.9</SL4J-API-version>
+	  <SL4J-Simple-version>2.0.9</SL4J-Simple-version>
+  </properties>
+  
+  <dependencies>
+	  
+	  <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>${SL4J-API-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-simple</artifactId>
+    <version>${SL4J-Simple-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.sonarsource.scanner.maven/sonar-maven-plugin -->
+<dependency>
+    <groupId>org.sonarsource.scanner.maven</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>${Sonar-Maven-plugin-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/net.rcarz/jira-client -->
+<dependency>
+    <groupId>net.rcarz</groupId>
+    <artifactId>jira-client</artifactId>
+    <version>${JiraClient-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+<dependency>
+    <groupId>org.apache.httpcomponents</groupId>
+    <artifactId>httpclient</artifactId>
+    <version>${HTTPClient-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>${Gson-version}</version>
+</dependency>
+
+
+
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<!-- for selenium java + API + Support + browser + remoteServer -->
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>${SeleniumJava-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+<!-- TDD Testing Framework for selenium API -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>${TestNG-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<!-- BDD Testing Framework for selenium API -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>${CucumberTestNG-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+<!-- Testing results in Reports -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-testng</artifactId>
+    <version>${AllureReport-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>${CucumberJunit-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-java</artifactId>
+    <version>${CucumberJava-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+<dependency>
+    <groupId>io.rest-assured</groupId>
+    <artifactId>rest-assured</artifactId>
+    <version>${RestAssuredAPI-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>${Json-version}</version>
+</dependency>
+
+<!--
+
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-log4j12</artifactId>
+    <version>${log4j-version}</version>
+</dependency>
+
+
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>POI-version</version>
+</dependency>
+-->
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml-schemas</artifactId>
+    <version>${POI-OOXML-Schema-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>${POI-OOXML-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-gherkin -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-gherkin</artifactId>
+    <version>${CucumberGherkin-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/net.masterthought/cucumber-reporting -->
+<dependency>
+    <groupId>net.masterthought</groupId>
+    <artifactId>cucumber-reporting</artifactId>
+    <version>${CucumberReport-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+<dependency>
+    <groupId>org.hamcrest</groupId>
+    <artifactId>hamcrest</artifactId>
+    <version>${Hamcrest-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-cucumber7-jvm -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-cucumber7-jvm</artifactId>
+    <version>${AllureCucumberJVM-version}</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-junit4 -->
+<dependency>
+    <groupId>io.qameta.allure</groupId>
+    <artifactId>allure-junit4</artifactId>
+    <version>${AllureJunit4-version}</version>
+</dependency>
+
+ <!-- https://mvnrepository.com/artifact/tech.grasshopper/extentreports-cucumber7-adapter -->
+<dependency>
+    <groupId>tech.grasshopper</groupId>
+    <artifactId>extentreports-cucumber7-adapter</artifactId>
+    <version>${ExtentReportCucumberJVM-version}</version>
+</dependency>
+
+
+<dependency>
+	<groupId>com.aventstack</groupId>
+   <artifactId>extentreports</artifactId>
+   <version>${ExtentReport-version}</version>
+</dependency>
+
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>${WebDriverManager-version}</version>
+</dependency>
+
+  </dependencies>
+  
+ <build>
+	 <plugins>
+		 <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${MavenCompiler-version}</version>
+          <configuration>
+			  <encoding>UTF-8</encoding>
+	            <source>17</source>
+	            <target>17</target>
+          </configuration>
+        </plugin>
+		 
+		 <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${MavenTest-version}</version>
+                <configuration>
+				<suiteXmlFiles>
+					testng.xml
+				</suiteXmlFiles>
+				 
+                    <parallel>methods</parallel>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
+                </configuration>
+            </plugin>
+            
+            <plugin>	
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>${MavenFail-version}</version>
+        <executions> 
+					<execution>
+         <configuration>
+			 <suiteXmlFiles>
+					testng.xml
+				</suiteXmlFiles>
+          <parallel>methods</parallel>
+          <threadCount>4</threadCount>
+          <perCoreThreadCount>true</perCoreThreadCount>
+        </configuration>
+        </execution>
+				</executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>${MavenResource-version}</version>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <!-- here the phase you need -->
+            <phase>validate</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${basedir}/target/extra-resources</outputDirectory>
+              <resources>          
+                <resource>
+                  <directory>src/non-packaged-resources</directory>
+                  <filtering>true</filtering>
+                </resource>
+              </resources>              
+            </configuration>            
+          </execution>
+        </executions>
+      </plugin>
+	 </plugins>
+ </build>
+</project>
