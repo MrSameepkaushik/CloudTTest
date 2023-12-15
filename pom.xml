@@ -260,6 +260,7 @@
 				 
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
+                    <outputDirectory>${basedir}/target/testNGreport</outputDirectory>
                 </configuration>
             </plugin>
             
