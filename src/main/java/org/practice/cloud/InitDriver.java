@@ -4,11 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.log4testng.Logger;
 
 public class InitDriver {
-	private static WebDriver driver=null;
+	private WebDriver driver=null;
+	private static InitDriver initialize=null;
+	private static final Logger log =Logger.getLogger(InitDriver.class);
 	
-	public static WebDriver createBrowserInstance(String browser) {
+	public WebDriver getDriverInstance(String browser)
+	{
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 			driver = new ChromeDriver();
@@ -23,9 +27,23 @@ public class InitDriver {
 		}
 		else
 		{
-			System.out.println(" please enter correct browser");
+			log.info("please enter valid browser");
 		}
 		return driver;
+	}
+	
+	private InitDriver(){
+		
+		
+	}
+	
+	public  static InitDriver initializationDriver() {
+		if(initialize==null)
+			initialize = new InitDriver();
+		else
+			return initialize;
+		
+		return initialize;
 	}
 
 }
